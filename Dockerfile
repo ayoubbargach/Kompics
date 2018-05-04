@@ -4,7 +4,8 @@ LABEL che:server:8080:ref=tomcat8 che:server:8080:protocol=http che:server:8000:
 ENV MAVEN_VERSION=3.3.9 \ 
     JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 \ 
     TOMCAT_HOME=/home/user/tomcat8 \ 
-    TERM=xterm ENV M2_HOME=/home/user/apache-maven-$MAVEN_VERSION 
+    TERM=xterm 
+ENV M2_HOME=/home/user/apache-maven-$MAVEN_VERSION 
 ENV PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH 
 RUN mkdir /home/user/tomcat8 /home/user/apache-maven-$MAVEN_VERSION && \ 
     wget -qO- "http://apache.ip-connect.vn.ua/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz" | tar -zx --strip-components=1 -C /home/user/apache-maven-$MAVEN_VERSION/ && \
