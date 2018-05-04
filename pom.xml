@@ -1,9 +1,9 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>se.kth.id2203</groupId>
-    <artifactId>project18</artifactId>
+    <groupId>noyau.kompics</groupId>
+    <artifactId>noyau</artifactId>
     <version>1.1-SNAPSHOT</version>
-    <name>ID2203 Project 2018</name>
+    <name>Noyau</name>
     <packaging>pom</packaging>
 
     <properties>
@@ -11,12 +11,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kompics.version>1.0.0</kompics.version>
     </properties>
-
-    <modules>
-        <module>client</module>
-        <module>common</module>
-        <module>server</module>
-    </modules>
 
     <dependencies>
         <dependency>
@@ -60,16 +54,6 @@
             <artifactId>kompics-component-java-timer</artifactId>
             <version>${kompics.version}</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-cli</groupId>
-            <artifactId>commons-cli</artifactId>
-            <version>1.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.larskroll</groupId>
-            <artifactId>common-utils</artifactId>
-            <version>1.4</version>
         </dependency>
     </dependencies>
     <build>
