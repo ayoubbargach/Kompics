@@ -20,9 +20,9 @@ RUN mkdir /home/user/tomcat8 /home/user/apache-maven-$MAVEN_VERSION && \
     mkdir /home/user/kompics
     
 WORKDIR /projects
-RUN git clone git://github.com/kompics/kompics.git
+RUN sudo git clone git://github.com/kompics/kompics.git
 
 WORKDIR /projects/kompics
-RUN mvn clean install
+RUN sudo mvn clean install
 
 WORKDIR /home/user
