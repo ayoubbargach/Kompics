@@ -1,5 +1,5 @@
 <project>
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>1.0.0</modelVersion>
     <groupId>noyau.kompics</groupId>
     <artifactId>noyau</artifactId>
     <version>1.1-SNAPSHOT</version>
