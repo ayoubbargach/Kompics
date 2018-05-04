@@ -24,3 +24,5 @@ RUN git clone git://github.com/kompics/kompics.git
 
 WORKDIR /home/user/kompics
 RUN mvn clean install
+
+WORKDIR /home/user
