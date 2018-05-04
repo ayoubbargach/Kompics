@@ -17,13 +17,4 @@ RUN mkdir /home/user/tomcat8 /home/user/apache-maven-$MAVEN_VERSION && \
     echo "export MAVEN_OPTS=\$JAVA_OPTS" >> /home/user/.bashrc && \
     sudo chgrp -R 0 ~/tomcat8 && \
     sudo chmod -R g+rwX ~/tomcat8 && \
-    mkdir /home/user/kompics
-
-WORKDIR /home/user
-RUN git clone git://github.com/kompics/kompics.git
-
-WORKDIR /home/user/kompics
-RUN mvn clean install
-
-WORKDIR /home/user
-RUN sudo mv kompics/ /projects
+    wget -qO- "http://kompics.sics.se/current/_downloads/sim-pingpong-global.zip" | tar -zx --strip-components=1 -C /projects/kompics-test
